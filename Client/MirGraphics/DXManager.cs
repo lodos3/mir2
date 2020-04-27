@@ -165,7 +165,7 @@ namespace Client.MirGraphics
 
             for (int i = 1; i < LightSizes.Length; i++)
             {
-                // int width = 125 + (57 *i);
+                //int width = 125 + (57 *i);
                 //int height = 110 + (57 * i);
                 int width = LightSizes[i].X;
                 int height = LightSizes[i].Y;
@@ -178,24 +178,24 @@ namespace Client.MirGraphics
                     {
                         using (GraphicsPath path = new GraphicsPath())
                         {
-                            //path.AddEllipse(new Rectangle(0, 0, width, height));
-                            //using (PathGradientBrush brush = new PathGradientBrush(path))
-                            //{
-                            //    graphics.Clear(Color.FromArgb(0, 0, 0, 0));
-                            //    brush.SurroundColors = new[] { Color.FromArgb(0, 255, 255, 255) };
-                            //    brush.CenterColor = Color.FromArgb(255, 255, 255, 255);
-                            //    graphics.FillPath(brush, path);
-                            //    graphics.Save();
-                            //}
+                            /*path.AddEllipse(new Rectangle(0, 0, width, height));
+                            using (PathGradientBrush brush = new PathGradientBrush(path))
+                            {
+                                graphics.Clear(Color.FromArgb(0, 0, 0, 0));
+                                brush.SurroundColors = new[] { Color.FromArgb(0, 255, 255, 255) };
+                                brush.CenterColor = Color.FromArgb(255, 255, 255, 255);
+                                graphics.FillPath(brush, path);
+                                graphics.Save();
+                            }*/
 
                             path.AddEllipse(new Rectangle(0, 0, width, height));
                             using (PathGradientBrush brush = new PathGradientBrush(path))
                             {
                                 Color[] blendColours = { Color.White,
-                                                     Color.FromArgb(255,150,150,150),
+                                                     Color.FromArgb(255,250,250,250),
+                                                     Color.FromArgb(255,190,190,190),
+                                                     Color.FromArgb(255,120,120,120),
                                                      Color.FromArgb(255,60,60,60),
-                                                     Color.FromArgb(255,30,30,30),
-                                                     Color.FromArgb(255,10,10,10),
                                                      Color.FromArgb(0,0,0,0)};
 
                                 float[] radiusPositions = { 0f, .20f, .40f, .60f, .80f, 1.0f };

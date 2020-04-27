@@ -9118,23 +9118,23 @@ namespace Client.MirScenes
             switch (MapDarkLight)
             {
                 case 1:
-                    Darkness = Color.FromArgb(255, 20, 20, 20);
+                    Darkness = Color.Black; // BLACK
                     break;
                 case 2:
-                    Darkness = Color.LightSlateGray;
+                    Darkness = Color.FromArgb(255, 80, 25, 25); // RED
                     break;
                 case 3:
-                    Darkness = Color.SkyBlue;
+                    Darkness = Color.FromArgb(255, 25, 80, 25); // GREEN
                     break;
                 case 4:
-                    Darkness = Color.Goldenrod;
+                    Darkness = Color.FromArgb(255, 25, 25, 80); // BLUE
                     break;
                 default:
-                    Darkness = Color.Black;
+                    Darkness = Color.FromArgb(255, 40, 40, 40); // DEFAULT
                     break;
             }
 
-            DXManager.Device.Clear(ClearFlags.Target, setting == LightSetting.Night ? Darkness : Color.FromArgb(255, 50, 50, 50), 0, 0);
+            DXManager.Device.Clear(ClearFlags.Target, setting == LightSetting.Night ? Darkness : Color.FromArgb(255, 40, 40, 40), 0, 0);
 
             #endregion
 
